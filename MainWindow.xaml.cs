@@ -1,16 +1,8 @@
-﻿using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Products;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace WPF_EFC_DF_Products
 {
@@ -71,7 +63,7 @@ namespace WPF_EFC_DF_Products
 
 		private void miDelete_Click(object sender, RoutedEventArgs e)
 		{
-			var x = cbProductname.SelectedItem as Products.Product;
+			if (cbProductname.SelectedItem is not Products.Product x) return;
 			cn.Products.Remove(x);
 			cn.SaveChanges();
 			MessageBox.Show("Product removed");
@@ -94,7 +86,8 @@ namespace WPF_EFC_DF_Products
 			cbProductname.Items.Filter = item =>
 				_ProductName.Length == 0 ? true :
 					((Product)item).ProductName.ToLower().Contains(_ProductName);
-			cbProductname.IsDropDownOpen = true; // Keep dropdown open during typing
-		}
+            // Keep dropdown open during typing
+            tbSearchProductName.Focus(); // Keep focus on the TextBox
+        }
 	}
 }
