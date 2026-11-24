@@ -23,7 +23,7 @@ using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.Configuration;
 
-namespace Products
+namespace WPF_EFC_DF_Products
 {
 
     public partial class cnProducts : DbContext

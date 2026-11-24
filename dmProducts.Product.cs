@@ -16,7 +16,7 @@ using System.Data.Common;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Products
+namespace WPF_EFC_DF_Products
 {
     public partial class Product {
 

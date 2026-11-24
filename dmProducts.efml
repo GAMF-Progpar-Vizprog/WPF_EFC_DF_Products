@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<efcore context-namespace="Products" namespace="Products" p1:name="cnProducts" p1:Guid="295b35bd-2f1c-4aed-b06d-d6420aa28894" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
+<efcore context-namespace="WPF_EFC_DF_Products" namespace="WPF_EFC_DF_Products" p1:name="cnProducts" p1:Guid="295b35bd-2f1c-4aed-b06d-d6420aa28894" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
   <class name="Product" entity-set="Products" table="Products" schema="dbo" p1:Guid="86c9f29a-1de7-455c-869a-3194974cb241">
     <id name="ProductID" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="a80ecda0-fd32-4eb6-8398-c50d8f12b10d">
       <column name="ProductID" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />

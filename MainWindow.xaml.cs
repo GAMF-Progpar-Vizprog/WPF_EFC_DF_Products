@@ -1,6 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using Products;
+using WPF_EFC_DF_Products;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -63,7 +63,7 @@ namespace WPF_EFC_DF_Products
 
 		private void miDelete_Click(object sender, RoutedEventArgs e)
 		{
-			if (cbProductname.SelectedItem is not Products.Product x) return;
+			if (cbProductname.SelectedItem is not WPF_EFC_DF_Products.Product x) return;
 			cn.Products.Remove(x);
 			cn.SaveChanges();
 			MessageBox.Show("Product removed");
